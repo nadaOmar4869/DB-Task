@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="hint">#5B5957</color>
+    <color name="error">#CA0447</color>
+    <color name="border_color">#E5E5E5</color>
+
+    <color name="colorPrimary">#3F51B5</color>
+
+
+</resources>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+
+        <variable
+            name="startIcon"
+            type="android.graphics.drawable.Drawable" />
+
+
+        <variable
+            name="hint"
+            type="String" />
+
+        <variable
+            name="text"
+            type="String" />
+
+
+        <variable
+            name="isEnabled"
+            type="Boolean" />
+
+
+        <variable
+            name="errorMessage"
+            type="String" />
+
+
+        <variable
+            name="inputType"
+            type="String" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@{hint}"
+            app:boxStrokeColor="@{errorMessage != null ?@color/error:@color/border_color}"
+            app:boxCornerRadiusBottomEnd="16dp"
+            app:boxCornerRadiusBottomStart="16dp"
+            app:boxCornerRadiusTopEnd="16dp"
+            app:boxCornerRadiusTopStart="16dp"
+            app:boxStrokeWidth="1dp"
+            tools:startIconDrawable="@drawable/ic_person"
+            app:startIconDrawable="@{startIcon}"
+            app:startIconTint="@color/black">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@{hint}"
+                android:text="@={text}"
+                android:textColor="@color/black"
+                app:inputType="@{inputType}" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/error_message_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{errorMessage}"
+            android:textColor="@color/error"
+            android:textSize="12sp"
+            app:visibility="@{errorMessage != null ? View.VISIBLE : View.GONE}"
+            tools:text="" />
+    </LinearLayout>
+
+
+</layout>

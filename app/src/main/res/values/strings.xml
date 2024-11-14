@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Task</string>
+
+    <!-- Strings used for buttons -->
+    <string name="save">Save</string>
+    <string name="show_all">Show All</string>
+
+
+    <string name="name">Name</string>
+    <string name="age">Age</string>
+    <string name="job_title">Job Title</string>
+    <string name="gender">Gender</string>
+
+    <!-- Strings used input filed type -->
+    <string name="type_text" translatable="false">text</string>
+    <string name="type_number" translatable="false">number</string>
+    <string name="empty_data">Empty Data</string>
+    <string name="gender_">Gender:</string>
+    <string name="age_">Age :</string>
+    <string name="save_data">Save Data</string>
+    <string name="all_data">All Data</string>
+    <string name="data_saved_successfully">Data saved successfully</string>
+
+
+</resources>
